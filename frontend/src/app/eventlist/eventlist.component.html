@@ -1,0 +1,25 @@
+<div class="col-md-10 col-md-offset-1" >
+      <h4>Event List</h4>
+      <table class="table table-bordered">
+        <tr>
+          <th>Event Name</th>
+          <th>Date</th>
+          <th>Price</th>
+          <th>Total Quantity</th> 
+          <th>Venue</th>
+          <th>On Sale</th> 
+        </tr>
+        <tr *ngFor="let el of eventlist">
+          <td>{{el.event_name}}</td>
+          <td>{{el.date}}</td>
+          <td>{{el.price}}</td>
+          <td>{{el.total_qty}}</td>
+          <td>{{el.venue}}</td>
+          <td><button type="button" (click)="buy()" >Buy</button></td>
+          <td>
+            <button type="button" (click)="addEvent()" >Add</button>
+          </td>
+        </tr>
+        
+      </table> 
+</div>
